@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    //컴파일러가 코드를 어떻게 변환할지 설정
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2022",
+    //컴파일 된 JS의 버전 -> ES2022
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    //컴파일에 포함된 library 목록, ES2022 & DOM
+    "module": "ESNext",
+    //module 코드 생성 방식, EXNext: 최신 ECMAScript 모듈 문법(ESM) - import, export
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true, //typescript 컴파일 시 js 파일 생성하지 않음 = true, 타입 체크만 하고 결과물 사용하지 않을 시
+    "jsx": "react-jsx", //react-jsx 문법 사용 jsx 변환
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true
+  },
+  "include": ["src"]
+}
