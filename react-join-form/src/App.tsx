@@ -1,7 +1,8 @@
 import './App.css';
+import JoinForm from './components/JoinForm';
 
 function App() {
-  return <></>;
+  return <JoinForm />;
 }
 
 export default App;
