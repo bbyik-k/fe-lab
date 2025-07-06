@@ -1,29 +1,50 @@
-import { forwardRef, useRef, type FormEvent, type ForwardedRef, type InputHTMLAttributes } from 'react';
+import { forwardRef, useEffect, type ForwardedRef, type InputHTMLAttributes } from 'react';
+import { useForm } from 'react-hook-form';
+
+type FormData = {
+  name: string;
+  email: string;
+  phone: string;
+};
 
 export default function JoinForm() {
-  const nameRef = useRef<HTMLInputElement>(null);
-  const emailRef = useRef<HTMLInputElement>(null);
-  const phoneRef = useRef<HTMLInputElement>(null);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>();
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log({
-      name: (nameRef.current as HTMLInputElement).value,
-      email: (emailRef.current as HTMLInputElement).value,
-      phone: (phoneRef.current as HTMLInputElement).value,
-    });
+  const submit = ({ name, email, phone }: FormData) => {
+    console.log({ name, email, phone });
   };
 
+  useEffect(() => {
+    console.log(
+      errors,
+      Object.values(errors).map((error) => error.message)
+    );
+  }, [errors]);
+
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit(submit)}>
       <div>
-        <Input id='name' name='name' type='text' required ref={nameRef} />
+        <Input id='name' type='text' required {...register('name')} />
       </div>
       <div>
-        <Input id='email' name='email' type='email' required ref={emailRef} />
+        <Input id='email' type='email' required {...register('email')} />
       </div>
       <div>
-        <Input id='phone' name='phone' type='tell' required ref={phoneRef} />
+        <Input
+          id='phone'
+          type='tell'
+          required
+          {...register('phone', {
+            pattern: {
+              value: /\d{10,11}/,
+              message: 'Invaild phone number',
+            },
+          })}
+        />
       </div>
       <div>
         <button type='submit'>Join</button>
