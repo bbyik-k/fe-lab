@@ -1,5 +1,6 @@
 import './App.css';
 import MainLayout from './components/common/MainLayout';
+import Panel, { PanelBody, PanelCap, PanelFooter, PanelHeader } from './components/common/Panel';
 import Tabs, { Tab, TabList, TabPanel, TabPanels } from './components/common/Tabs';
 
 function App() {
@@ -12,7 +13,14 @@ function App() {
             <Tab index={1}>tab2</Tab>
           </TabList>
           <TabPanels>
-            <TabPanel index={0}>Panel1</TabPanel>
+            <TabPanel index={0}>
+              <PanelCap>2층 1섹션</PanelCap>
+              <Panel>
+                <PanelHeader>Header</PanelHeader>
+                <PanelBody>Body</PanelBody>
+                <PanelFooter>Footer</PanelFooter>
+              </Panel>
+            </TabPanel>
             <TabPanel index={1}>Panel2</TabPanel>
           </TabPanels>
         </Tabs>

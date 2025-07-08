@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 
 @theme {
+  /* 색상 지정 */
   --color-white: #ffffff;
   --color-black: #000000;
   --color-main: #0d00a4;
@@ -17,6 +18,30 @@
   --color-bg2: #fbfbff;
 
   --border-b-3: 3px;
+
+  /* 폰트 사이즈 */
+  --text-10: 10px;
+  --text-15: 15px;
+
+  /* 여백 픽셀 지정 */
+  --spacing-1: 1px;
+  --spacing-2: 2px;
+  --spacing-3: 3px;
+  --spacing-4: 4px;
+  --spacing-5: 5px;
+  --spacing-6: 6px;
+  --spacing-8: 8px;
+  --spacing-9: 9px;
+  --spacing-10: 10px;
+  --spacing-12: 12px;
+  --spacing-14: 14px;
+  --spacing-16: 16px;
+  --spacing-18: 18px;
+  --spacing-20: 20px;
+  --spacing-26: 26px;
+
+  /* round 값 지정 */
+  --radius-10: 10px;
 }
 
 html,
