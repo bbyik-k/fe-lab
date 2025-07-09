@@ -22,6 +22,7 @@
   /* 폰트 사이즈 */
   --text-10: 10px;
   --text-15: 15px;
+  --text-16: 16px;
 
   /* 여백 픽셀 지정 */
   --spacing-1: 1px;
@@ -33,14 +34,30 @@
   --spacing-8: 8px;
   --spacing-9: 9px;
   --spacing-10: 10px;
+  --spacing-11: 11px;
   --spacing-12: 12px;
+  --spacing-13: 13px;
   --spacing-14: 14px;
+  --spacing-15: 15px;
   --spacing-16: 16px;
+  --spacing-17: 17px;
   --spacing-18: 18px;
+  --spacing-19: 19px;
   --spacing-20: 20px;
+  --spacing-21: 21px;
+  --spacing-22: 22px;
+  --spacing-23: 23px;
+  --spacing-24: 24px;
+  --spacing-25: 25px;
   --spacing-26: 26px;
+  --spacing-27: 27px;
+  --spacing-28: 28px;
+  --spacing-29: 29px;
+  --spacing-30: 30px;
 
   --spacing-36: 36px;
+
+  --spacing-62: 62px;
 
   --spacing-75: 75px;
 

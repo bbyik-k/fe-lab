@@ -79,7 +79,7 @@ function DropdownMenu() {
   const { close, opened, options, onChange } = useContext(DropdownContext)!;
   const containerRef = useOutsideClick(close);
   return opened ? (
-    <div ref={containerRef as RefObject<HTMLDivElement>} className='absolute left-0 top-15 border border-gray-300 rounded-10 flex flex-col min-w-197 bg-white'>
+    <div ref={containerRef as RefObject<HTMLDivElement>} className='absolute left-0 top-62 border border-gray-300 rounded-10 flex flex-col min-w-197 bg-white'>
       {options.map((option, index) => (
         <DropdownMenuItem key={`${option.value}`} label={option.label} onSelect={() => onChange(index)} />
       ))}
