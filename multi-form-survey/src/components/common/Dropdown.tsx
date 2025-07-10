@@ -4,14 +4,15 @@ import ArrowIcon from '../../assets/icons/arrow_drop_down.svg?react';
 import useOutsideClick from '../../hooks/common/useOutsideClick';
 
 interface DropdownProps<T> {
+  defaultValue: T;
   placeholder?: string;
   options: DropdownOption<T>[];
   onChange?: (value: T) => void;
 }
 
-export default function Dropdown<T>({ placeholder, options, onChange }: PropsWithChildren<DropdownProps<T>>) {
+export default function Dropdown<T>({ placeholder, options, onChange, defaultValue }: PropsWithChildren<DropdownProps<T>>) {
   const [opened, setOpened] = useState(false);
-  const [selected, setSelected] = useState(-1); //index 값으로 지정, 선택되지 않음 = -1
+  const [selected, setSelected] = useState(defaultValue ? options.findIndex((option) => option.value === defaultValue) : -1); //index 값으로 지정, 선택되지 않음 = -1
 
   const open = useCallback(() => setOpened(true), []);
   const close = useCallback(() => setOpened(false), []);
@@ -79,7 +80,7 @@ function DropdownMenu() {
   const { close, opened, options, onChange } = useContext(DropdownContext)!;
   const containerRef = useOutsideClick(close);
   return opened ? (
-    <div ref={containerRef as RefObject<HTMLDivElement>} className='absolute left-0 top-62 border border-gray-300 rounded-10 flex flex-col min-w-197 bg-white'>
+    <div ref={containerRef as RefObject<HTMLDivElement>} className='absolute left-0 top-62 border border-gray-300 rounded-10 flex flex-col min-w-197 bg-white z-10'>
       {options.map((option, index) => (
         <DropdownMenuItem key={`${option.value}`} label={option.label} onSelect={() => onChange(index)} />
       ))}
