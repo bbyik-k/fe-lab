@@ -1,1 +1,85 @@
 @import 'tailwindcss';
+
+@theme {
+  /* 색상 지정 */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-main: #0d00a4;
+  --color-gray-100: #e5e5ea;
+  --color-gray-200: #d4d4d4;
+  --color-gray-300: #aeaeb2;
+  --color-gray-400: #8e8e93;
+  --color-gray-500: #848487;
+  --color-gray-600: #636366;
+  --color-gray-700: #4a4a4a;
+  --color-gray-800: #303030;
+  --color-gray-900: #1a1a1a;
+  --color-bg: #f6f6f9;
+  --color-bg2: #fbfbff;
+
+  --border-b-3: 3px;
+
+  /* 폰트 사이즈 */
+  --text-10: 10px;
+  --text-15: 15px;
+  --text-16: 16px;
+
+  /* 여백 픽셀 지정 */
+  --spacing-1: 1px;
+  --spacing-2: 2px;
+  --spacing-3: 3px;
+  --spacing-4: 4px;
+  --spacing-5: 5px;
+  --spacing-6: 6px;
+  --spacing-8: 8px;
+  --spacing-9: 9px;
+  --spacing-10: 10px;
+  --spacing-11: 11px;
+  --spacing-12: 12px;
+  --spacing-13: 13px;
+  --spacing-14: 14px;
+  --spacing-15: 15px;
+  --spacing-16: 16px;
+  --spacing-17: 17px;
+  --spacing-18: 18px;
+  --spacing-19: 19px;
+  --spacing-20: 20px;
+  --spacing-21: 21px;
+  --spacing-22: 22px;
+  --spacing-23: 23px;
+  --spacing-24: 24px;
+  --spacing-25: 25px;
+  --spacing-26: 26px;
+  --spacing-27: 27px;
+  --spacing-28: 28px;
+  --spacing-29: 29px;
+  --spacing-30: 30px;
+
+  --spacing-36: 36px;
+
+  --spacing-50: 50px;
+
+  --spacing-62: 62px;
+
+  --spacing-75: 75px;
+
+  --spacing-190: 190px;
+  --spacing-191: 191px;
+  --spacing-192: 192px;
+  --spacing-193: 193px;
+  --spacing-194: 194px;
+  --spacing-195: 195px;
+  --spacing-196: 196px;
+  --spacing-197: 197px;
+  --spacing-198: 198px;
+  --spacing-199: 199px;
+  --spacing-200: 200px;
+
+  /* round 값 지정 */
+  --radius-10: 10px;
+}
+
+html,
+body {
+  height: 100%;
+}
