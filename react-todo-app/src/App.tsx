@@ -4,6 +4,7 @@ import TodoInput from './components/TodoInput';
 import TodoList from './components/TodoList';
 
 import type { Todo } from './types';
+import UserPages from './pages/UserPage';
 
 function App() {
   return <Layout />;
@@ -56,9 +57,10 @@ function TodoContainer() {
 
   return (
     <>
-      <TodoInput onAddTodo={onAddTodo} />
+      <UserPages />
+      {/* <TodoInput onAddTodo={onAddTodo} />
       <h1>Todo List</h1>
-      <TodoList todos={todos} onTogleTodo={onTogleTodo} />
+      <TodoList todos={todos} onTogleTodo={onTogleTodo} /> */}
     </>
   );
 }
